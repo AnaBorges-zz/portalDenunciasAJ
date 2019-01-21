@@ -4,7 +4,7 @@
     margin: 30px;
 }
 
-.conteudo-style p {
+.conteudo-style p{
     text-align: center;
 }
 
@@ -24,6 +24,10 @@
     margin-bottom: 0px;
 }
 
+.formatacao-formulario a:hover{
+    color: #0a0db1d2;
+    text-decoration: none;
+}
 
 .formatacao-formulario button{
     margin-top: 15px;
@@ -37,4 +41,8 @@
 .table{
     text-align: center;
     border: 2px solid #00ace6;
+}
+
+.btn-interrogacion{
+    background: none;
 }
