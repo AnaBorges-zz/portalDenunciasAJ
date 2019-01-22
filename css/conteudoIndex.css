@@ -1,42 +1,13 @@
 .conteudo-style{
     display: flex;
     flex-direction: column;
-    margin: 30px;
 }
 
-.conteudo-style p{
+.conteudo-style span{
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.formatacao-formulario{
-    border:2px solid #00ace6;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.formatacao-formulario legend{
-    font-size:18px;
-    font-weight: 600;
-}
-
-.formatacao-formulario p{
-    text-align: left;
-    margin-bottom: 0px;
-}
-
-.formatacao-formulario a:hover{
-    color: #0a0db1d2;
-    text-decoration: none;
-}
-
-.formatacao-formulario button{
-    margin-top: 15px;
-}
-
-.questionarioRelatorio{
-    display:flex;
-    flex-direction: row;
-}
 
 .table{
     text-align: center;
@@ -45,4 +16,31 @@
 
 .btn-interrogacion{
     background: none;
+}
+
+
+table{
+    background-color: rgb(21, 192, 30);
+}
+
+table span{
+    padding: 10px;
+    color:#fff;
+    border-radius: 0px 10px;
+}
+
+.revisao{
+    background: rgb(255, 239, 18);
+}
+
+.solucionada{
+    background: rgb(21, 192, 30);
+}
+
+.cancelada{
+    background: rgb(255, 60, 46);
+}
+
+.submetida{
+    background: rgb(21, 181, 192);
 }

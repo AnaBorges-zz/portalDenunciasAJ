@@ -60,3 +60,32 @@ footer{
     color:#fff;
     font-size: 35px;
 }
+
+.formatacao-formulario{
+    border:2px solid #dee3e4;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.espacamentoPadrao{
+    margin:30px;
+}
+
+.formatacao-formulario legend{
+    font-size:18px;
+    font-weight: 600;
+}
+
+.formatacao-formulario p{
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.formatacao-formulario a:hover{
+    color: #0a0db1d2;
+    text-decoration: none;
+}
+
+.formatacao-formulario button{
+    margin-top: 15px;
+}
