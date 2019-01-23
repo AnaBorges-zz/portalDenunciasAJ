@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #0a0db1d2;
 }
 
 
@@ -9,32 +10,23 @@ body{
 header{
     font-family:font85995;
     background-color: #2A2B2E;
-    color: #fff;
-    padding: 50px;
+    padding: 40px;
 }
 
 header h1{
     font-family:font85995;
     font-size: 55px;
-    margin-bottom: 25px;
+    color:#fff;
 }
 
 header a{
-    background-color:rgb(255, 255, 255);
     padding: 10px;
-    color:rgb(0, 0, 0);
-}
-
-header a:hover{
-    background-color:rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
-    text-decoration: none;
 }
 
 .header-display{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /*SECTION Footer*/
@@ -45,7 +37,7 @@ footer{
 }
 
 .footer-content{
-    margin: 30px 0px;
+    margin: 20px 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -88,4 +80,12 @@ footer{
 
 .formatacao-formulario button{
     margin-top: 15px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.logo{
+   margin-left: 12%;
 }

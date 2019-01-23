@@ -50,12 +50,36 @@
         <div class="header-display">
           <h1>Portal de Denúncias BSI</h1>
           <nav>
-            <a href="index.html">Inicio</a> <a href="cadastro.html">Membros</a>
-            <a href="relatorioMembroAutenticado.html">Relatório</a>
+            <a class="btn btn-light" href="index.html">Inicio</a> <a class="btn btn-light" href="cadastro.html">Comissão</a>
+            <a class="btn btn-light" href="relatorioMembroAutenticado.html">Relatório</a>
           </nav>
         </div>
       </div>
     </header>
+
+     <!-- Modal -->
+  <div class="modal fade" id="justificativaButton" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Escreva sua justificativa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <legend>Descrição da sua Denúncia:</legend>
+          <textarea class="form-control" id="textDenuncia" rows="6">
+            </textarea>
+        </form>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="container">
       <div class="filtragem">
@@ -93,7 +117,7 @@
         <table class="table table-bordered table-responsive table-striped">
           <thead>
             <tr>
-              <th>Denunciante</th>
+              <th>Email</th>
               <th>Responsável</th>
               <th>Data</th>
               <th>Denúncia</th>
@@ -102,7 +126,7 @@
           </thead>
           <tbody class="tableMembroAutenticado">
             <tr class="">
-              <td>Anônimo</td>
+              <td>Não especificado</td>
               <td class="nomeFormat">
                 <form>
                   <div class="form-row align-items-center">
@@ -112,6 +136,8 @@
                       <option value="2">Carlos Gomes</option>
                       <option value="3">Fabio Assunção</option>
                       <option value="4">Luciane Dias</option>
+                      <option value="5">Sem Membro</option>
+
                     </select>
                   </div>
                 </form>
@@ -145,16 +171,18 @@
             </tr>
 
             <tr class="">
-              <td>Anônimo</td>
+              <td>Não especificado</td>
               <td class="nomeFormat">
                 <form>
                   <div class="form-row align-items-center">
                     <select class="custom-select statusSelect" id="formStatus">
-                      <option selected value="0">João do Prédio</option>
-                      <option value="1">Mariazinha</option>
+                      <option value="0">João do Prédio</option>
+                      <option selected value="1">Mariazinha</option>
                       <option value="2">Carlos Gomes</option>
                       <option value="3">Fabio Assunção</option>
                       <option value="4">Luciane Dias</option>
+                      <option value="5">Sem Membro</option>
+
                     </select>
                   </div>
                 </form>
@@ -188,7 +216,7 @@
             </tr>
 
             <tr class="">
-              <td>Anônimo</td>
+              <td>mariazinha@uniriotec.br</td>
               <td class="nomeFormat">
                 <form>
                   <div class="form-row align-items-center">
@@ -228,12 +256,13 @@
                     </select>
                   </div>
                 </form>
-                <button type="button" class="btn btn-success">Ver Solução</button>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                data-target="#justificativaButton">Solução</button>
               </td>
             </tr>
 
             <tr class="">
-              <td>Anônimo</td>
+              <td>pedrinho@uniriotec.br</td>
               <td class="nomeFormat">
                 <form>
                   <div class="form-row align-items-center">
@@ -273,7 +302,8 @@
                     </select>
                   </div>
                 </form>
-                <button type="button" class="btn btn-danger">Ver Desfecho</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal"
+                data-target="#justificativaButton">Justificativa</button>
               </td>
             </tr>
           </tbody>
@@ -297,7 +327,6 @@
             <h6 class="font-weight-bold">CONTATE-NOS</h6>
             <p><i class="fa fa-home mr-3"></i>Avenida Pasteur 458, RJ</p>
             <p><i class="fa fa-envelope mr-3"></i> alphajunior@uniriotec.br</p>
-            <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
           </div>
 
           <div>
@@ -319,6 +348,11 @@
                 <a class="btn-sm"> <i class="fab fa-linkedin"></i> </a>
               </li>
             </ul>
+
+            <div class="logo">
+              <img src="../images/logotipo-alpha.png" alt=""">
+            </div>
+
           </div>
         </div>
 

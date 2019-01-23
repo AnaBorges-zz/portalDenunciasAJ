@@ -28,7 +28,7 @@
     <div class="container">
       <div class="header-display">
         <h1>Portal de Denúncias BSI</h1>
-        <nav><a href="index.html">Inicio</a> <a href="membros.html">Comissão</a></nav>
+        <nav><a class="btn btn-light" href="index.html">Inicio</a> <a class="btn btn-light" href="membros.html">Comissão</a></nav>
       </div>
     </div>
   </header>
@@ -60,7 +60,7 @@
       O Portal de Denúncias do BSI foi desenvolvido com o intuito de facilitar
       e transparecer o processo de submissão de denúncias e reclamações da
       comunidade acadêmica. Uma denúncia submetida é averiguada pela
-      <a href="#">comissão</a> e encaminhada ao público adequado, como o NAPE,
+      <a href="membros.html">comissão</a> e encaminhada ao público adequado, como o NAPE,
       a diretoria ou a decania.
     </span>
 
@@ -118,7 +118,6 @@
     <table class="table table-bordered table-responsive table-striped">
       <thead>
         <tr>
-          <th>Denunciante</th>
           <th>Responsável</th>
           <th>Data</th>
           <th>Denúncia</th>
@@ -127,7 +126,6 @@
       </thead>
     <tbody>
         <tr>
-            <td>Anônimo</td>
             <td>João do Prédio</td>
             <td>26/10</td>
             <td>
@@ -139,11 +137,10 @@
               posuere cubilia Curae
             </td>
             <td>
-                <span class="solucionada" data-placement="bottom" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Solucionada</span>
+                <span class="solucionada" data-placement="bottom" data-toggle="popover" title="Solução" data-content="A denúncia foi aceita e o responsável foi punido">Solucionada</span>
             </td>
           </tr>
           <tr>
-              <td>Anônimo</td>
               <td>João do Prédio</td>
               <td>26/10</td>
               <td>
@@ -155,11 +152,10 @@
                 posuere cubilia Curae
               </td>
               <td>
-                  <span class="submetida">Submetida</span>
+                <span class="cancelada" data-placement="bottom" data-toggle="popover" title="Motivo" data-content="A denúncia foi cancelada pelos membros da comissão">Cancelada</span>              
               </td>
             </tr>
             <tr>
-                <td>Anônimo</td>
                 <td>João do Prédio</td>
                 <td>26/10</td>
                 <td>
@@ -175,7 +171,6 @@
                 </td>
               </tr>
               <tr>
-                  <td>Anônimo</td>
                   <td>João do Prédio</td>
                   <td>26/10</td>
                   <td>
@@ -187,7 +182,7 @@
                     posuere cubilia Curae
                   </td>
                   <td>
-                    <span class="cancelada">Cancelada</span>
+                    <span class="revisao">Em Revisão</span>
                   </td>
                 </tr>
       </tbody>
@@ -210,7 +205,6 @@
           <h6 class="font-weight-bold">CONTATE-NOS</h6>
           <p><i class="fa fa-home mr-3"></i>Avenida Pasteur 458, RJ</p>
           <p><i class="fa fa-envelope mr-3"></i> alphajunior@uniriotec.br</p>
-          <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
         </div>
 
         <div>
@@ -229,7 +223,13 @@
               <a class="btn-sm"> <i class="fab fa-linkedin"></i> </a>
             </li>
           </ul>
+
+          <div class="logo">
+            <img src="../images/logotipo-alpha.png" alt=""">
+          </div>
         </div>
+
+        
       </div>
 
       <hr style="background-color: rgb(64, 64, 70);" />
