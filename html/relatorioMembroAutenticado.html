@@ -6,6 +6,14 @@
     <title>Portal de Denúncias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!--Botstrap-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../bootstrap/css/bootstrap.css"
+    />
+
     <!--Import CSS-->
     <link
       rel="stylesheet"
@@ -19,14 +27,6 @@
       type="text/css"
       media="screen"
       href="../css/comissao.css"
-    />
-
-    <!--Botstrap-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
     />
 
     <link
@@ -50,36 +50,15 @@
         <div class="header-display">
           <h1>Portal de Denúncias BSI</h1>
           <nav>
-            <a class="btn btn-light" href="index.html">Inicio</a> <a class="btn btn-light" href="cadastro.html">Comissão</a>
-            <a class="btn btn-light" href="relatorioMembroAutenticado.html">Relatório</a>
+            <a class="btn btn-light" href="index.html">Inicio</a>
+            <a class="btn btn-light" href="cadastro.html">Comissão</a>
+            <a class="btn btn-light" href="relatorioMembroAutenticado.html"
+              >Relatório</a
+            >
           </nav>
         </div>
       </div>
     </header>
-
-     <!-- Modal -->
-  <div class="modal fade" id="justificativaButton" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Escreva sua justificativa</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="">
-          <legend>Descrição da sua Denúncia:</legend>
-          <textarea class="form-control" id="textDenuncia" rows="6">
-            </textarea>
-        </form>  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
     <div class="container">
       <div class="filtragem">
@@ -122,6 +101,7 @@
               <th>Data</th>
               <th>Denúncia</th>
               <th class="statusFormat">Status</th>
+              <th>Observação</th>
             </tr>
           </thead>
           <tbody class="tableMembroAutenticado">
@@ -129,7 +109,7 @@
               <td>Não especificado</td>
               <td class="nomeFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option selected value="0">João do Prédio</option>
                       <option value="1">Mariazinha</option>
@@ -137,7 +117,6 @@
                       <option value="3">Fabio Assunção</option>
                       <option value="4">Luciane Dias</option>
                       <option value="5">Sem Membro</option>
-
                     </select>
                   </div>
                 </form>
@@ -153,7 +132,7 @@
               </td>
               <td class="statusFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option value="0">Submetida</option>
                       <option value="1"
@@ -174,7 +153,7 @@
               <td>Não especificado</td>
               <td class="nomeFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option value="0">João do Prédio</option>
                       <option selected value="1">Mariazinha</option>
@@ -182,7 +161,6 @@
                       <option value="3">Fabio Assunção</option>
                       <option value="4">Luciane Dias</option>
                       <option value="5">Sem Membro</option>
-
                     </select>
                   </div>
                 </form>
@@ -198,7 +176,7 @@
               </td>
               <td class="statusFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option disabled value="0">Submetida</option>
                       <option selected value="1"
@@ -219,7 +197,7 @@
               <td>mariazinha@uniriotec.br</td>
               <td class="nomeFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option disabled value="0">João do Prédio</option>
                       <option disabled value="1">Mariazinha</option>
@@ -242,7 +220,7 @@
               </td>
               <td class="statusFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option disabled value="0">Submetida</option>
                       <option disabled value="1"
@@ -256,8 +234,12 @@
                     </select>
                   </div>
                 </form>
-                <button type="button" class="btn btn-success" data-toggle="modal"
-                data-target="#justificativaButton">Solução</button>
+              </td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis sunt placeat maiores cumque consequatur velit iste
+                voluptatem, neque quo reprehenderit quibusdam quos ipsa atque
+                aut libero eaque, praesentium veniam aliquam.
               </td>
             </tr>
 
@@ -265,14 +247,14 @@
               <td>pedrinho@uniriotec.br</td>
               <td class="nomeFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
-                        <option disabled value="0">João do Prédio</option>
-                        <option disabled value="1">Mariazinha</option>
-                        <option disabled value="2">Carlos Gomes</option>
-                        <option disabled value="3">Fabio Assunção</option>
-                        <option disabled value="4">Luciane Dias</option>
-                        <option selected value="5">Sem Membro</option>
+                      <option disabled value="0">João do Prédio</option>
+                      <option disabled value="1">Mariazinha</option>
+                      <option disabled value="2">Carlos Gomes</option>
+                      <option disabled value="3">Fabio Assunção</option>
+                      <option disabled value="4">Luciane Dias</option>
+                      <option selected value="5">Sem Membro</option>
                     </select>
                   </div>
                 </form>
@@ -288,7 +270,7 @@
               </td>
               <td class="statusFormat">
                 <form>
-                  <div class="form-row align-items-center">
+                  <div class="form-row">
                     <select class="custom-select statusSelect" id="formStatus">
                       <option disabled value="0">Submetida</option>
                       <option disabled value="1"
@@ -302,8 +284,12 @@
                     </select>
                   </div>
                 </form>
-                <button type="button" class="btn btn-danger" data-toggle="modal"
-                data-target="#justificativaButton">Justificativa</button>
+                <td>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis sunt placeat maiores cumque consequatur velit iste
+                    voluptatem, neque quo reprehenderit quibusdam quos ipsa atque
+                    aut libero eaque, praesentium veniam aliquam.
+                  </td>
               </td>
             </tr>
           </tbody>
@@ -352,7 +338,6 @@
             <div class="logo">
               <img src="../images/logotipo-alpha.png" alt=""">
             </div>
-
           </div>
         </div>
 

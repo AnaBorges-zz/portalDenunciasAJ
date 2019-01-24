@@ -14,11 +14,6 @@
     border: 2px solid #00ace6;
 }
 
-.btn-interrogacion{
-    background: none;
-}
-
-
 table{
     background-color: rgb(21, 192, 30);
 }
@@ -29,18 +24,10 @@ table span{
     border-radius: 0px 10px;
 }
 
-.revisao{
-    background: rgb(245, 228, 0);
+.table td {
+    padding: 10px;
 }
 
-.solucionada{
-    background: rgb(21, 192, 30);
-}
-
-.cancelada{
-    background: rgb(255, 60, 46);
-}
-
-.submetida{
-    background: rgb(21, 181, 192);
+.table .tdDenuncia{
+    padding: 10px 30px;
 }

@@ -7,20 +7,20 @@
   <title>Portal de Denúncias</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!--Import CSS-->
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/conteudoIndex.css" />
-
   <!--Botstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../bootstrap/css/bootstrap.css" />
+
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous" />
 
   <!--Font Alpha-->
   <link href="https://www.fontify.me/wf/e616f23df7318a71e791bef275123744" rel="stylesheet" type="text/css" />
+  
+  <!--Import CSS-->
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css" />
 </head>
 
 <body>
@@ -32,8 +32,6 @@
       </div>
     </div>
   </header>
-
-
   <!-- Modal -->
   <div class="modal fade" id="termosDeUso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
     aria-hidden="true">
@@ -75,42 +73,48 @@
                 </textarea>
             </div>
 
-            <div class="col-6">
-              <fieldset>
-                <legend>
-                  Visibilidade da denúncia:
-                  <a href="#" data-toggle="tooltip" title="“Ao optar por ‘Visível para o público,’  você permite que sua denúncia conste no relatório público de denúncias caso ela seja aprovada pela comissão para tal.”
-                  ">
-                    <i class="fas fa-question-circle"></i>
-                  </a>
-                </legend>
+            <div class="col-6 formDetalhe">
+              <div>
+                  <legend>
+                      Visibilidade da denúncia:
+                      <a href="#" data-toggle="tooltip" 
+                      title="Ao optar por ‘Visível para o público,’  você permite que sua denúncia conste no 
+                      relatório público de denúncias caso ela seja aprovada pela comissão para tal.">
+                        <i class="fas fa-question-circle"></i>
+                      </a>
+                    </legend>
+                   
+                    <p>
+                      <input type="radio" name="privacidade" id="publico" />
+                      <label for="publico">Visível para o público</label>
+                     
+                    </p>
+                    <p>
+                      <input type="radio" name="privacidade" id="privado" />
+                      <label for="privado">Visível apenas para a comissão</label>
+                    </p>    
+              </div>
                
-                <p>
-                  <input type="radio" name="privacidade" id="publico" />
-                  <label for="publico">Visível para o público</label>
-                 
-                </p>
-                <p>
-                  <input type="radio" name="privacidade" id="privado" />
-                  <label for="privado">Visível apenas para a comissão</label>
-                </p>
-              </fieldset>
+              <div>
+                  <legend>Email:</legend>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+              </div>
+             
+              <div>
+                  <input type="checkbox" name="termos" id="termosObrigatorio" />
+                  <label for="termosObrigatorio">Aceito os <a href="#" class="button-termos" data-toggle="modal"
+                  data-target="#termosDeUso">termos de política de uso</a></label>
+              </div>
 
-              <legend>Email:</legend>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+              <div>
+                  <button type="submit" class="btn btn-outline-primary">
+                      Submeter Formulário
+                    </button>
+              </div>
+              
 
-              <fieldset>
-                <input type="checkbox" name="termos" id="termosObrigatorio" />
-                <label for="termosObrigatorio">Aceito os <a href="#" class="button-termos" data-toggle="modal"
-                    data-target="#termosDeUso">termos de política de uso</a></label>
-              </fieldset>
-
-              <button type="submit" class="btn btn-outline-primary">
-                Submeter Formulário
-              </button>
             </div>
           </div>
-
         </div>
       </form>
     </div>
@@ -128,7 +132,7 @@
         <tr>
             <td>João do Prédio</td>
             <td>26/10</td>
-            <td>
+            <td class="tdDenuncia">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               lorem nulla, fringilla in faucibus nec, tempor id lorem. Quisque
               velit sapien, sollicitudin vitae massa ut, ultrices imperdiet
@@ -137,13 +141,13 @@
               posuere cubilia Curae
             </td>
             <td>
-                <span class="solucionada" data-placement="bottom" data-toggle="popover" title="Solução" data-content="A denúncia foi aceita e o responsável foi punido">Solucionada</span>
+                <span class="tagSolucionada" data-placement="bottom" data-toggle="popover" title="Solução" data-content="A denúncia foi aceita e o responsável foi punido">Solucionada</span>
             </td>
           </tr>
           <tr>
               <td>João do Prédio</td>
               <td>26/10</td>
-              <td>
+              <td class="tdDenuncia">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                 lorem nulla, fringilla in faucibus nec, tempor id lorem. Quisque
                 velit sapien, sollicitudin vitae massa ut, ultrices imperdiet
@@ -152,13 +156,13 @@
                 posuere cubilia Curae
               </td>
               <td>
-                <span class="cancelada" data-placement="bottom" data-toggle="popover" title="Motivo" data-content="A denúncia foi cancelada pelos membros da comissão">Cancelada</span>              
+                <span class="tagCancelada" data-placement="bottom" data-toggle="popover" title="Motivo" data-content="A denúncia foi cancelada pelos membros da comissão">Cancelada</span>              
               </td>
             </tr>
             <tr>
                 <td>João do Prédio</td>
                 <td>26/10</td>
-                <td>
+                <td class="tdDenuncia">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                   lorem nulla, fringilla in faucibus nec, tempor id lorem. Quisque
                   velit sapien, sollicitudin vitae massa ut, ultrices imperdiet
@@ -167,13 +171,13 @@
                   posuere cubilia Curae
                 </td>
                 <td>
-                    <span class="revisao">Em Revisão</span>
+                    <span class="tagRevisao">Em Revisão</span>
                 </td>
               </tr>
               <tr>
                   <td>João do Prédio</td>
                   <td>26/10</td>
-                  <td>
+                  <td class="tdDenuncia">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                     lorem nulla, fringilla in faucibus nec, tempor id lorem. Quisque
                     velit sapien, sollicitudin vitae massa ut, ultrices imperdiet
@@ -182,7 +186,7 @@
                     posuere cubilia Curae
                   </td>
                   <td>
-                    <span class="revisao">Em Revisão</span>
+                    <span class="tagRevisao">Em Revisão</span>
                   </td>
                 </tr>
       </tbody>
@@ -249,8 +253,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
   <script src="../js/main.js"></script>
 
 

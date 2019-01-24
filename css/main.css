@@ -1,16 +1,15 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: #0a0db1d2;
+    align-content: space-between;
 }
-
 
 /*SECTION Header*/
 header{
     font-family:font85995;
     background-color: #2A2B2E;
-    padding: 40px;
+    padding:20px 0px;
+    margin-bottom:20px;
 }
 
 header h1{
@@ -37,7 +36,7 @@ footer{
 }
 
 .footer-content{
-    margin: 20px 0px;
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -59,8 +58,10 @@ footer{
     padding: 20px;
 }
 
-.espacamentoPadrao{
-    margin:30px;
+.formDetalhe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .formatacao-formulario legend{
@@ -69,7 +70,6 @@ footer{
 }
 
 .formatacao-formulario p{
-    text-align: left;
     margin-bottom: 0px;
 }
 
@@ -78,8 +78,13 @@ footer{
     text-decoration: none;
 }
 
-.formatacao-formulario button{
-    margin-top: 15px;
+.btn-interrogacion{
+    background: none;
+}
+
+
+textarea{
+    resize: none;
 }
 
 .logo img{
@@ -88,4 +93,20 @@ footer{
 
 .logo{
    margin-left: 12%;
+}
+
+.table td{
+    vertical-align: middle;
+}
+
+.tagRevisao{
+    background: rgb(245, 228, 0);
+}
+
+.tagSolucionada{
+    background: rgb(21, 192, 30);
+}
+
+.tagCancelada{
+    background: rgb(255, 60, 46);
 }
